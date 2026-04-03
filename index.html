@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM-Textil</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .splash {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(18, 18, 18, 0.9);
+            animation: splashFadeOut 2s 3s forwards;
+        }
+        @keyframes splashFadeOut {
+            to { opacity: 0; }
+        }
+        .main {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            document.querySelector('.splash').style.display = 'none';
+            document.querySelector('.main').style.display = 'block';
+        };
+    </script>
+</head>
+<body>
+    <div class="splash">
+        <h1>AM-Textil</h1>
+    </div>
+    <div class="main">
+        <h2>Welcome to AM-Textil</h2>
+        <p>Your main content goes here.</p>
+    </div>
+</body>
+</html>
