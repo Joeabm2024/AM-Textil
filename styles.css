@@ -1,0 +1,60 @@
+.splash-screen {
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-color: #0a0e27;
+    color: #c9a961;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9a961;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.about {
+    background-color: #0a0e27;
+    color: #c9a961;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-form {
+    background-color: #0a0e27;
+    color: #c9a961;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #0a0e27;
+    color: #c9a961;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    header, .hero, .about, .contact-form, .footer {
+        padding: 10px;
+    }
+}
