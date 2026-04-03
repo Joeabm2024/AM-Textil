@@ -1,40 +1,37 @@
-// Script.js
-
-// Function to show splash screen
-function showSplashScreen() {
-    const splash = document.getElementById('splash');
-    splash.style.display = 'block';
-    setTimeout(() => {
-        splash.style.display = 'none';
-    }, 3000); // Show splash for 3 seconds
-}
-
-// Smooth scrolling for navigation links
-const navLinks = document.querySelectorAll('a[href^="#"]');
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetID = this.getAttribute('href');
-        const targetSection = document.querySelector(targetID);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    });
+// Splash screen animation
+document.addEventListener('DOMContentLoaded', function() {
+    const splash = document.querySelector('.splash-screen');
+    const mainContent = document.querySelector('.main-content');
+    
+    if (splash) {
+        setTimeout(function() {
+            splash.style.display = 'none';
+            if (mainContent) {
+                mainContent.style.display = 'block';
+            }
+        }, 3000);
+    }
 });
 
-// Active class management for nav links on scroll
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY;
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const sectionID = section.getAttribute('id');
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            document.querySelector('a[href="#' + sectionID + '"]').classList.add('active');
-        } else {
-            document.querySelector('a[href="#' + sectionID + '"]').classList.remove('active');
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
         }
     });
 });
 
-// Initialize the splash screen
-window.onload = showSplashScreen;
+// Form submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+        this.reset();
+    });
+}
