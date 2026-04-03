@@ -1,58 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AM-Textil</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-        .splash {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(18, 18, 18, 0.9);
-            animation: splashFadeOut 2s 3s forwards;
-        }
-        @keyframes splashFadeOut {
-            to { opacity: 0; }
-        }
-        .main {
-            display: none;
-        }
-    </style>
-    <script>
-        window.onload = function() {
-            document.querySelector('.splash').style.display = 'none';
-            document.querySelector('.main').style.display = 'block';
-        };
-    </script>
+    <title>AM-Textil - Confección de Ropa</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="splash">
-        <h1>AM-Textil</h1>
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="splash-screen">
+        <div class="splash-content">
+            <h1 class="splash-title">AM-TEXTIL</h1>
+            <p class="splash-subtitle">Confección de Ropa Personalizada</p>
+            <div class="splash-line"></div>
+        </div>
     </div>
-    <div class="main">
-        <h2>Welcome to AM-Textil</h2>
-        <p>Your main content goes here.</p>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <div id="mainContent" class="main-content">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <h1>AM-TEXTIL</h1>
+                </div>
+                <nav class="navbar">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#catalogo">Catálogo</a>
+                    <a href="#sobre">Sobre Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="header-icons">
+                    <a href="#" class="icon">❤️</a>
+                    <a href="#" class="icon">🛒</a>
+                    <a href="#" class="icon">👤</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Ropa Personalizada y Confección</h2>
+                <p>Fabricamos camisetas, uniformes y prendas personalizadas bajo pedido</p>
+                <button class="btn-primary">Ver Catálogo</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CATEGORÍAS -->
+        <section id="catalogo" class="categories">
+            <h2>Nuestros Productos</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">👕</div>
+                    <h3>Camisetas</h3>
+                    <p>Diseños personalizados</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">👔</div>
+                    <h3>Uniformes</h3>
+                    <p>Para empresas y eventos</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">👗</div>
+                    <h3>Prendas Especiales</h3>
+                    <p>Confección a medida</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">🎒</div>
+                    <h3>Accesorios</h3>
+                    <p>Complementos textiles</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section id="sobre" class="about">
+            <h2>Nuestro Taller</h2>
+            <p>Somos un taller familiar especializado en confección y personalización de prendas textiles. Trabajamos bajo pedido con la máxima calidad y atención al detalle.</p>
+            <div class="about-features">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Calidad Premium</h3>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Diseños Personalizados</h3>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Atención al Cliente</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="contact">
+            <h2>Ponte en Contacto</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2026 AM-Textil. Todos los derechos reservados.</p>
+        </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
