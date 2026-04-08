@@ -1,60 +1,244 @@
-.splash-screen {
-    animation: fade-in 2s;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f4f4;
 }
 
-header {
-    background-color: #0a0e27;
-    color: #c9a961;
-    padding: 20px;
-    text-align: center;
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#111;
+color:white;
 }
 
-.hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #c9a961;
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.logo{
+height:60px;
 }
 
-.about {
-    background-color: #0a0e27;
-    color: #c9a961;
-    padding: 40px;
-    text-align: center;
+.header nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
 }
 
-.contact-form {
-    background-color: #0a0e27;
-    color: #c9a961;
-    padding: 20px;
-    border-radius: 5px;
+/* HERO */
+.hero{
+position:relative;
+height:450px;
+overflow:hidden;
 }
 
-.footer {
-    background-color: #0a0e27;
-    color: #c9a961;
-    text-align: center;
-    padding: 10px;
-    position: relative;
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-@media (max-width: 600px) {
-    header, .hero, .about, .contact-form, .footer {
-        padding: 10px;
-    }
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+text-align:center;
+background:rgba(0,0,0,0.5);
+padding:30px;
+border-radius:10px;
+}
+
+/* CATÁLOGO */
+.catalog{
+padding:80px;
+}
+
+.catalog h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+/* GRID PRO (mejor que flex repetido) */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* TARJETAS */
+.product{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+text-align:center;
+transition:.3s;
+}
+
+.product:hover{
+transform:translateY(-5px);
+}
+
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+.product h3{
+margin-bottom:10px;
+}
+
+/* BOTÓN */
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:black;
+color:white;
+text-decoration:none;
+border-radius:5px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#333;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+color:white;
+margin-top:50px;
+}
+
+/* BUSCADOR (si lo usas después) */
+.buscador{
+width:300px;
+padding:10px;
+margin:20px auto;
+display:block;
+border-radius:5px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.pedido-container {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+
+/* SECCIÓN PEDIDO */
+.pedido-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+}
+
+/* TARJETA */
+.pedido-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+.pedido-card h2 {
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* DETALLES */
+.detalle {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.detalle ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.detalle li {
+  margin-bottom: 8px;
+}
+
+/* PASOS */
+.pasos {
+  margin-bottom: 20px;
+}
+
+.pasos h3 {
+  margin-bottom: 10px;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+  display: inline-block;
+  padding: 14px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
