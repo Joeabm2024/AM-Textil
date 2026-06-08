@@ -2,7 +2,7 @@
    AM TEXTIL — Script Global
 ===================================================== */
 
-const WHATSAPP = "50688888888"; // ← cambia este número
+const WHATSAPP = "50662509920"; // ← cambia este número
 
 /* ── WhatsApp Buttons ── */
 document.querySelectorAll(".pedirBtn").forEach(btn => {
