@@ -5,9 +5,9 @@
 ===================================================== */
 
 :root {
-  --f-giant: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --f-giant: var(--font-display);
   --rosa: #F4B8C4;
-  --marino-fondo: #0E1B45;
+  --marino-fondo: #14233B;
 }
 
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -17,7 +17,7 @@ main { overflow-x: clip; }
 .loader { position: fixed; inset: 0; z-index: 2000; background: var(--marino); display: grid; place-items: center; align-content: center; gap: 18px;
   animation: loaderOut .5s ease 1.15s forwards; }
 .loader img { width: 150px; height: auto; }
-.loader p { margin: 0; font-family: var(--f-giant); font-weight: 900; letter-spacing: .3em; color: var(--rosa); font-size: 18px; }
+.loader p { margin: 0; font-family: var(--f-giant); font-weight: 700; letter-spacing: .3em; color: var(--rosa); font-size: 18px; }
 .loader .bar { width: 160px; height: 3px; background: rgba(255,255,255,.18); overflow: hidden; }
 .loader .bar i { display: block; height: 100%; background: var(--rosa); transform-origin: left; transform: scaleX(0); animation: fill 1.05s ease forwards; }
 @keyframes fill { to { transform: scaleX(1); } }
@@ -26,8 +26,8 @@ main { overflow-x: clip; }
 /* Portada */
 .hero-amos { position: relative; min-height: min(86svh, 760px); display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; align-content: center; text-align: center; overflow: hidden; overflow: clip; isolation: isolate;
   padding: 64px max(16px, env(safe-area-inset-left, 0px)) 56px;
-  background: radial-gradient(ellipse at 50% 38%, #243C85 0%, var(--marino) 64%); color: #FFF8F5; }
-.hero-amos h1 { margin: 0; font-family: var(--f-giant); font-weight: 900; font-size: clamp(7rem, 34vw, 29rem); line-height: .78; letter-spacing: .01em; text-transform: uppercase; color: #FFF8F5; max-width: 100%; }
+  background: radial-gradient(ellipse at 50% 38%, #2C4A7A 0%, var(--marino) 64%); color: #FFF8F5; }
+.hero-amos h1 { margin: 0; font-family: var(--f-giant); font-weight: 700; font-size: clamp(5rem, 27vw, 25rem); line-height: .82; letter-spacing: 0; text-transform: uppercase; color: #FFF8F5; max-width: 100%; }
 .script { font-family: var(--font-display); font-style: italic; font-weight: 400; }
 .hero-amos .script { font-size: clamp(1.7rem, 4.4vw, 3.2rem); color: var(--rosa); margin: 14px 0 0; line-height: 1.1; }
 .hero-amos .lead { max-width: 46ch; margin: 18px auto 28px; color: #D5DAEE; }
@@ -46,28 +46,28 @@ main { overflow-x: clip; }
 
 /* Cinta */
 .marquee { background: var(--rosa); color: var(--marino); overflow: hidden; white-space: nowrap; border-block: 2px solid var(--marino); }
-.marquee div { display: inline-flex; gap: 28px; padding: 14px 0; animation: scrollx 30s linear infinite; font-family: var(--f-giant); font-weight: 900; font-size: clamp(1.4rem, 3.2vw, 2.4rem); letter-spacing: .05em; }
+.marquee div { display: inline-flex; gap: 28px; padding: 14px 0; animation: scrollx 30s linear infinite; font-family: var(--f-giant); font-weight: 700; font-size: clamp(1.4rem, 3.2vw, 2.4rem); letter-spacing: .05em; }
 .marquee span { display: inline-flex; align-items: center; gap: 28px; }
 .marquee i { font-style: normal; font-size: .7em; }
 @keyframes scrollx { to { transform: translateX(-50%); } }
 
 /* Frase que se ilumina al hacer scroll */
 .say { background: var(--rosa); color: var(--marino); padding-block: clamp(72px, 13vw, 160px); }
-.say p { margin: 0 auto; max-width: 15ch; font-family: var(--f-giant); font-weight: 900; font-size: clamp(3rem, 10vw, 8.6rem); line-height: .92; text-transform: uppercase; text-wrap: balance; text-align: center; }
+.say p { margin: 0 auto; max-width: 15ch; font-family: var(--f-giant); font-weight: 700; font-size: clamp(2.4rem, 8vw, 7rem); line-height: 1; text-transform: uppercase; text-wrap: balance; text-align: center; }
 .say .w { display: inline-block; margin-right: .2em; opacity: .3; transition: opacity .35s ease; }
 .say .w.lit { opacity: 1; }
 .say small { display: block; margin: 26px auto 0; text-align: center; font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 3vw, 2.1rem); }
 
 /* Carrusel */
-.stage { --ink: #14275E; --wc: #FFF6F8; --bgc: #F4B8C4; position: relative; min-height: min(100svh, 900px); overflow: hidden; overflow: clip; isolation: isolate; color: var(--ink); transition: color .6s ease;
+.stage { --ink: #1C3150; --wc: #FFF6F8; --bgc: #F4B8C4; position: relative; min-height: min(100svh, 900px); overflow: hidden; overflow: clip; isolation: isolate; color: var(--ink); transition: color .6s ease;
   display: grid; grid-template-rows: auto 1fr auto; padding: 30px max(16px, env(safe-area-inset-left, 0px)) 32px; }
 .bgs { position: absolute; inset: 0; z-index: -3; }
 .bgl { position: absolute; inset: 0; }
 .words { position: absolute; inset: 0; z-index: -2; display: grid; place-items: center; pointer-events: none; }
-.words span { grid-area: 1 / 1; font-family: var(--f-giant); font-weight: 900; font-size: clamp(5.5rem, 22vw, 22rem); line-height: .8; text-transform: uppercase; color: var(--wc); opacity: 0; transform: translateY(14%) scale(.96); transition: opacity .7s ease, transform .9s cubic-bezier(.2,.7,.2,1), color .6s ease; white-space: nowrap; }
+.words span { grid-area: 1 / 1; font-family: var(--f-giant); font-weight: 700; font-size: clamp(3rem, 13.5vw, 17rem); line-height: .85; text-transform: uppercase; color: var(--wc); opacity: 0; transform: translateY(14%) scale(.96); transition: opacity .7s ease, transform .9s cubic-bezier(.2,.7,.2,1), color .6s ease; white-space: nowrap; }
 .words span.on { opacity: 1; transform: none; }
 .s-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.s-top .cnt { font-family: var(--f-giant); font-weight: 900; font-size: 24px; letter-spacing: .06em; }
+.s-top .cnt { font-family: var(--f-giant); font-weight: 700; font-size: 24px; letter-spacing: .06em; }
 .s-top .cat { font-size: 14px; }
 .mid { position: relative; display: grid; place-items: center; min-height: 300px; touch-action: pan-y; perspective: 1000px; padding-block: 14px; }
 .tilt { grid-area: 1 / 1; width: 100%; display: grid; place-items: center; transform: rotateY(calc(var(--rx, 0) * 10deg)) rotateX(calc(var(--ry, 0) * -7deg)); transition: transform .3s ease-out; }
@@ -83,7 +83,7 @@ main { overflow-x: clip; }
 @keyframes bob2 { from { transform: translateY(-6px) rotate(var(--r)); } to { transform: translateY(8px) rotate(calc(var(--r) * -.6)); } }
 
 .info { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 20px clamp(24px, 6vw, 90px); align-items: end; }
-.info h2 { margin: 0; font-family: var(--f-giant); font-weight: 900; text-transform: uppercase; font-size: clamp(2.6rem, 6vw, 5rem); line-height: .88; }
+.info h2 { margin: 0; font-family: var(--f-giant); font-weight: 700; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 4rem); line-height: .95; }
 .info .sc { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.8vw, 2.1rem); margin: 6px 0 0; line-height: 1.15; }
 .info .desc { margin: 0 0 12px; max-width: 46ch; }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; padding: 0; }
@@ -102,7 +102,7 @@ main { overflow-x: clip; }
 /* Cierre */
 .close { background: var(--marino-fondo); color: #FFF8F5; text-align: center; padding-block: clamp(80px, 13vw, 160px); }
 .close .script { font-size: clamp(1.8rem, 5vw, 3.6rem); color: var(--rosa); margin: 0 0 6px; }
-.close h2 { margin: 0 auto; font-family: var(--f-giant); font-weight: 900; text-transform: uppercase; font-size: clamp(4.5rem, 16vw, 13rem); line-height: .82; }
+.close h2 { margin: 0 auto; font-family: var(--f-giant); font-weight: 700; text-transform: uppercase; font-size: clamp(3rem, 12vw, 10rem); line-height: .9; }
 .close .lead { max-width: 52ch; margin: 26px auto 30px; color: #D5DAEE; }
 .close .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
