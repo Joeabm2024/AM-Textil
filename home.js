@@ -11,7 +11,7 @@
       desc: "Camisas y blusas para mujer, hombre, niñas y niños. Cortes cómodos y telas que se sienten bien todo el día.",
       etiquetas: ["Mujer", "Hombre", "Niñas", "Niños"], enlace: "camisas.html",
       fotos: ["camisas-1", "camisas-2", "camisas-3", "camisas-4"],
-      bg: "#F4B8C4", ink: "#1C3150", wc: "#FFF6F8" },
+      bg: "#E2CBA0", ink: "#1C3150", wc: "#FBF3E3" },
     { palabra: "Pijamas", cat: "Pijamas", nombre: "Pijamas", frase: "para soñar bonito",
       desc: "Para toda la familia, incluso conjuntos que combinan. Telas suaves para descansar mejor.",
       etiquetas: ["Mujer", "Hombre", "Niñas", "Niños", "Familia"], enlace: "pijamas.html",
