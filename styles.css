@@ -1,10 +1,14 @@
 /* =====================================================
    AMOS — Estilos Globales
    Paleta: Marino · Rosa · Oro · Marfil
-   Tipografía: Playfair Display + DM Sans
+   Tipografía: Caviar Dreams
 ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+/* Tipografía de la marca: Caviar Dreams (archivos en la carpeta fonts/) */
+@font-face { font-family: 'Caviar Dreams'; src: url('fonts/CaviarDreams.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Caviar Dreams'; src: url('fonts/CaviarDreams_Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Caviar Dreams'; src: url('fonts/CaviarDreams_Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Caviar Dreams'; src: url('fonts/CaviarDreams_BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
 
 /* ── Variables ── */
 :root {
@@ -13,9 +17,9 @@
   --oro:        #C9A24D;
   --marfil:     #FFF8F5;
   --marfil2:    #FBE7EB;
-  --azul:       #2E4A8F;
-  --azul2:      #223A75;
-  --marino:     #14275E;
+  --azul:       #3A5A8C;
+  --azul2:      #2B4670;
+  --marino:     #1C3150;
   --gris:       #6F6E85;
   --blanco:     #FFFFFF;
 
@@ -26,8 +30,8 @@
   --radius: 14px;
   --radius-sm: 8px;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: 'Caviar Dreams', 'Century Gothic', 'Avenir Next', system-ui, sans-serif;
+  --font-body:    'Caviar Dreams', 'Century Gothic', 'Avenir Next', system-ui, sans-serif;
 }
 
 /* ── Reset ── */
@@ -66,7 +70,7 @@ body {
 
 .brand { display: flex; align-items: center; gap: 12px; }
 
-.logo { width: 100px; height: auto; }
+.logo { height: 58px; width: auto; display: block; }
 
 .brand-name {
   font-family: var(--font-display);
@@ -269,7 +273,7 @@ body {
    BANNER DE CATEGORÍA
 =================================================== */
 .page-banner {
-  background: linear-gradient(135deg, var(--marino) 0%, #24397F 100%);
+  background: linear-gradient(135deg, var(--marino) 0%, #2C4A7A 100%);
   padding: 52px 64px;
   color: var(--marfil);
 }
