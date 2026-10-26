@@ -1,5 +1,5 @@
 /* =====================================================
-   AM TEXTIL — Script Global
+   AMOS — Script Global
 ===================================================== */
 
 const WHATSAPP = "50662509920"; // ← cambia este número

@@ -1,6 +1,6 @@
 /* =====================================================
-   AM TEXTIL — Estilos Globales
-   Paleta: Terracota · Crema · Ocre · Verde Oliva
+   AMOS — Estilos Globales
+   Paleta: Marino · Rosa · Oro · Marfil
    Tipografía: Playfair Display + DM Sans
 ===================================================== */
 
@@ -8,20 +8,20 @@
 
 /* ── Variables ── */
 :root {
-  --terracota:  #C4603A;
-  --terracota2: #A84E2C;
-  --ocre:       #D49B54;
-  --crema:      #FDF6EC;
-  --crema2:     #F5E8D0;
-  --oliva:      #6B7B52;
-  --oliva2:     #536040;
-  --carbon:     #2B2520;
-  --gris:       #8A7F78;
+  --cereza:    #C2415F;
+  --cereza2:   #A33150;
+  --oro:        #C9A24D;
+  --marfil:     #FFF8F5;
+  --marfil2:    #FBE7EB;
+  --azul:       #2E4A8F;
+  --azul2:      #223A75;
+  --marino:     #14275E;
+  --gris:       #6F6E85;
   --blanco:     #FFFFFF;
 
-  --shadow-sm: 0 2px 8px rgba(43,37,32,.08);
-  --shadow-md: 0 6px 22px rgba(43,37,32,.13);
-  --shadow-lg: 0 14px 40px rgba(43,37,32,.18);
+  --shadow-sm: 0 2px 8px rgba(20,39,94,.08);
+  --shadow-md: 0 6px 22px rgba(20,39,94,.13);
+  --shadow-lg: 0 14px 40px rgba(20,39,94,.18);
 
   --radius: 14px;
   --radius-sm: 8px;
@@ -37,16 +37,16 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background: var(--crema);
-  color: var(--carbon);
+  background: var(--marfil);
+  color: var(--marino);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--crema2); }
-::-webkit-scrollbar-thumb { background: var(--ocre); border-radius: 99px; }
+::-webkit-scrollbar-track { background: var(--marfil2); }
+::-webkit-scrollbar-thumb { background: var(--oro); border-radius: 99px; }
 
 /* ===================================================
    HEADER
@@ -57,7 +57,7 @@ body {
   align-items: center;
   padding: 0 64px;
   height: 72px;
-  background: var(--carbon);
+  background: var(--marino);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -71,7 +71,7 @@ body {
 .brand-name {
   font-family: var(--font-display);
   font-size: 22px;
-  color: var(--crema);
+  color: var(--marfil);
   letter-spacing: .5px;
 }
 
@@ -82,7 +82,7 @@ body {
 }
 
 .header nav a {
-  color: var(--crema2);
+  color: var(--marfil2);
   text-decoration: none;
   font-size: 13.5px;
   font-weight: 500;
@@ -94,7 +94,7 @@ body {
 
 .header nav a:hover,
 .header nav a.active {
-  background: var(--terracota);
+  background: var(--cereza);
   color: var(--blanco);
 }
 
@@ -110,7 +110,7 @@ body {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--crema);
+  background: var(--marfil);
   border-radius: 2px;
   transition: .3s;
 }
@@ -122,7 +122,7 @@ body {
   position: relative;
   height: 580px;
   overflow: hidden;
-  background: var(--carbon);
+  background: var(--marino);
 }
 
 .slides { width: 100%; height: 100%; }
@@ -145,9 +145,9 @@ body {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(43,37,32,.65) 0%,
+    rgba(20,39,94,.65) 0%,
     rgba(196,96,58,.25) 60%,
-    rgba(43,37,32,.5) 100%
+    rgba(20,39,94,.5) 100%
   );
   z-index: 1;
 }
@@ -163,7 +163,7 @@ body {
   padding: 44px 52px;
   border-radius: var(--radius);
   backdrop-filter: blur(3px);
-  background: rgba(43,37,32,.3);
+  background: rgba(20,39,94,.3);
   border: 1px solid rgba(253,246,236,.15);
   min-width: 380px;
 }
@@ -172,7 +172,7 @@ body {
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--ocre);
+  color: var(--oro);
   margin-bottom: 12px;
   font-weight: 500;
 }
@@ -209,7 +209,7 @@ body {
   transition: background .3s, transform .3s;
 }
 .dot.active {
-  background: var(--ocre);
+  background: var(--oro);
   transform: scale(1.3);
 }
 
@@ -219,7 +219,7 @@ body {
 .btn {
   display: inline-block;
   padding: 11px 24px;
-  background: var(--terracota);
+  background: var(--cereza);
   color: var(--blanco);
   text-decoration: none;
   border-radius: var(--radius-sm);
@@ -231,18 +231,18 @@ body {
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--terracota2);
+  background: var(--cereza2);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(196,96,58,.35);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--terracota);
-  color: var(--terracota);
+  border: 2px solid var(--cereza);
+  color: var(--cereza);
 }
 .btn-outline:hover {
-  background: var(--terracota);
+  background: var(--cereza);
   color: var(--blanco);
 }
 
@@ -269,18 +269,18 @@ body {
    BANNER DE CATEGORÍA
 =================================================== */
 .page-banner {
-  background: linear-gradient(135deg, var(--carbon) 0%, #3d3028 100%);
+  background: linear-gradient(135deg, var(--marino) 0%, #24397F 100%);
   padding: 52px 64px;
-  color: var(--crema);
+  color: var(--marfil);
 }
 .page-banner .breadcrumb {
   font-size: 13px;
-  color: var(--ocre);
+  color: var(--oro);
   margin-bottom: 8px;
   letter-spacing: .3px;
 }
 .page-banner .breadcrumb a {
-  color: var(--ocre);
+  color: var(--oro);
   text-decoration: none;
 }
 .page-banner h1 {
@@ -307,7 +307,7 @@ body {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: var(--carbon);
+  color: var(--marino);
 }
 
 .section-sub {
@@ -325,14 +325,14 @@ body {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 600;
-  color: var(--carbon);
+  color: var(--marino);
 }
 .categoria::before {
   content: "";
   display: inline-block;
   width: 4px;
   height: 28px;
-  background: var(--terracota);
+  background: var(--cereza);
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -340,7 +340,7 @@ body {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--crema2);
+  background: var(--marfil2);
 }
 
 /* ===================================================
@@ -354,16 +354,16 @@ body {
 .buscador {
   width: 100%;
   padding: 12px 18px 12px 44px;
-  border: 2px solid var(--crema2);
+  border: 2px solid var(--marfil2);
   border-radius: 99px;
   font-family: var(--font-body);
   font-size: 14px;
   background: var(--blanco);
-  color: var(--carbon);
+  color: var(--marino);
   outline: none;
   transition: border .2s;
 }
-.buscador:focus { border-color: var(--terracota); }
+.buscador:focus { border-color: var(--cereza); }
 .buscador::placeholder { color: var(--gris); }
 .search-icon {
   position: absolute;
@@ -404,7 +404,7 @@ body {
 .product-img-wrap {
   position: relative;
   overflow: hidden;
-  background: var(--crema2);
+  background: var(--marfil2);
 }
 .product img {
   width: 100%;
@@ -420,7 +420,7 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: rgba(43,37,32,.6);
+  background: rgba(20,39,94,.6);
   color: white;
   border-radius: 6px;
   padding: 4px 8px;
@@ -443,7 +443,7 @@ body {
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
-  color: var(--carbon);
+  color: var(--marino);
   line-height: 1.3;
 }
 
@@ -464,7 +464,7 @@ body {
    SECCIÓN INICIO — BLOQUES DESTACADOS
 =================================================== */
 .home-intro {
-  background: var(--carbon);
+  background: var(--marino);
   padding: 72px 64px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -474,7 +474,7 @@ body {
 .home-intro-text h2 {
   font-family: var(--font-display);
   font-size: 40px;
-  color: var(--crema);
+  color: var(--marfil);
   line-height: 1.2;
   margin-bottom: 16px;
 }
@@ -498,9 +498,9 @@ body {
   border-radius: 99px;
   padding: 6px 14px;
   font-size: 13px;
-  color: var(--crema2);
+  color: var(--marfil2);
 }
-.badge span { color: var(--ocre); }
+.badge span { color: var(--oro); }
 
 .home-intro-img img {
   width: 100%;
@@ -511,7 +511,7 @@ body {
 
 /* Stats strip */
 .stats-strip {
-  background: var(--terracota);
+  background: var(--cereza);
   display: grid;
   grid-template-columns: repeat(4,1fr);
   text-align: center;
@@ -562,7 +562,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(43,37,32,.75) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(20,39,94,.75) 0%, transparent 55%);
 }
 .collection-info {
   position: absolute;
@@ -614,7 +614,7 @@ body {
   position: absolute;
   top: 20px;
   right: 28px;
-  color: var(--crema);
+  color: var(--marfil);
   font-size: 36px;
   cursor: pointer;
   line-height: 1;
@@ -650,7 +650,7 @@ body {
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow-sm);
-  border-top: 3px solid var(--terracota);
+  border-top: 3px solid var(--cereza);
 }
 .contact-card .icon {
   font-size: 26px;
@@ -688,7 +688,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 48px; height: 48px;
-  background: var(--terracota);
+  background: var(--cereza);
   color: white;
   border-radius: 50%;
   font-family: var(--font-display);
@@ -703,7 +703,7 @@ body {
    FOOTER
 =================================================== */
 footer {
-  background: var(--carbon);
+  background: var(--marino);
   color: rgba(253,246,236,.6);
   padding: 40px 64px;
   display: flex;
@@ -715,7 +715,7 @@ footer {
 .footer-brand {
   font-family: var(--font-display);
   font-size: 20px;
-  color: var(--crema);
+  color: var(--marfil);
 }
 .footer-copy { font-size: 13px; }
 .footer-links { display: flex; gap: 20px; }
@@ -725,7 +725,7 @@ footer {
   font-size: 13px;
   transition: color .2s;
 }
-.footer-links a:hover { color: var(--ocre); }
+.footer-links a:hover { color: var(--oro); }
 
 /* ===================================================
    ANIMACIÓN SCROLL
@@ -745,7 +745,7 @@ footer {
 =================================================== */
 @media (max-width: 900px) {
   .header { padding: 0 24px; }
-  .header nav { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--carbon); padding: 16px; gap: 4px; }
+  .header nav { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--marino); padding: 16px; gap: 4px; }
   .header nav.open { display: flex; }
   .menu-toggle { display: flex; }
 
