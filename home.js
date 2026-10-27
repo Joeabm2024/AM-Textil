@@ -11,22 +11,22 @@
       desc: "Camisas y blusas para mujer, hombre, niñas y niños. Cortes cómodos y telas que se sienten bien todo el día.",
       etiquetas: ["Mujer", "Hombre", "Niñas", "Niños"], enlace: "camisas.html",
       fotos: ["camisas-1", "camisas-2", "camisas-3", "camisas-4"],
-      bg: "#E2CBA0", ink: "#1C3150", wc: "#FBF3E3" },
+      bg: "#E0CBAA", ink: "#1C3150", wc: "#F7F2E8" },
     { palabra: "Pijamas", cat: "Pijamas", nombre: "Pijamas", frase: "para soñar bonito",
       desc: "Para toda la familia, incluso conjuntos que combinan. Telas suaves para descansar mejor.",
       etiquetas: ["Mujer", "Hombre", "Niñas", "Niños", "Familia"], enlace: "pijamas.html",
       fotos: ["pijamas-1", "pijamas-2", "pijamas-3", "pijamas-4"],
-      bg: "#1C3150", ink: "#FFF3F0", wc: "#34517F" },
+      bg: "#1C3150", ink: "#F5EFE3", wc: "#2F4A6E" },
     { palabra: "Vestidos", cat: "Vestidos", nombre: "Vestidos", frase: "casual o de fiesta",
       desc: "Casuales, elegantes y para ocasiones especiales. Diseños para ella y para las más pequeñas.",
       etiquetas: ["Casual", "Elegante", "Ocasiones especiales"], enlace: "vestidos.html",
       fotos: ["vestidos-1", "vestidos-2", "vestidos-3", "vestidos-4"],
-      bg: "#E6B84F", ink: "#1C3150", wc: "#F8E2A0" },
+      bg: "#BE9652", ink: "#1C3150", wc: "#D4B87F" },
     { palabra: "Uniformes", cat: "Uniformes", nombre: "Uniformes", frase: "con tu logo o bordado",
       desc: "Para empresas, restaurantes y equipos. Resistentes, cómodos y con presentación impecable.",
       etiquetas: ["Empresas", "Restaurantes", "Equipos"], enlace: "uniformes.html",
       fotos: ["uniformes-1", "uniformes-2", "uniformes-3", "uniformes-4"],
-      bg: "#86A8D6", ink: "#142640", wc: "#C3D6EE" }
+      bg: "#7B96B2", ink: "#142640", wc: "#A6BACF" }
   ];
 
   var $ = function (id) { return document.getElementById(id); };
