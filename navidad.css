@@ -1,0 +1,88 @@
+/* =====================================================
+   AMOS — Sección navideña
+   Rojo, pino y oro sobre la paleta de la marca
+===================================================== */
+:root {
+  --rojo: #A61E2B;
+  --rojo2: #861621;
+  --pino: #1F5B43;
+  --pino2: #143D2C;
+}
+
+.nav-navidad { background: var(--rojo); color: var(--marfil) !important; }
+.header nav a.nav-navidad:hover, .header nav a.nav-navidad.active { background: var(--oro); color: var(--marino) !important; }
+
+.nav-script { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 3vw, 2.1rem); color: var(--champagne, #E0CBAA); margin: 0 0 6px; }
+.nav-script.dark { color: var(--rojo); }
+
+/* Nieve ligera hecha solo con CSS */
+.snow { position: absolute; inset: 0; pointer-events: none; opacity: .55;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.9) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,.7) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,.55) 0 3px, transparent 4px);
+  background-size: 180px 180px, 120px 120px, 260px 260px;
+  background-position: 0 0, 40px 60px, 90px 20px;
+  animation: nieve 40s linear infinite; }
+@keyframes nieve { to { background-position: 0 600px, 40px 780px, 90px 420px; } }
+
+/* Portada */
+.nav-hero { position: relative; overflow: hidden; color: var(--marfil);
+  background: radial-gradient(ellipse at 20% 0%, #2c7a5a 0%, var(--pino) 40%, var(--pino2) 100%);
+  padding: clamp(48px, 8vw, 96px) 64px 0; }
+.nav-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: repeating-linear-gradient(135deg, var(--rojo) 0 18px, var(--marfil) 18px 36px); }
+.nav-hero-inner { position: relative; max-width: 760px; padding-bottom: clamp(32px, 6vw, 64px); }
+.nav-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 9vw, 6.4rem); line-height: .98; margin: 0 0 18px; }
+.nav-lead { max-width: 52ch; font-size: 17px; color: rgba(245,239,227,.88); margin-bottom: 26px; }
+.nav-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-gold, .btn-red, .btn-ghost { display: inline-block; padding: 13px 28px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid transparent; transition: transform .2s, background .2s; }
+.btn-gold { background: var(--oro); color: var(--marino); border-color: var(--oro); }
+.btn-gold:hover { background: #cba662; transform: translateY(-2px); }
+.btn-red { background: var(--rojo); color: var(--marfil); border-color: var(--rojo); }
+.btn-red:hover { background: var(--rojo2); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--marfil); border-color: rgba(245,239,227,.6); }
+.btn-ghost:hover { background: rgba(255,255,255,.12); transform: translateY(-2px); }
+.nav-facts { position: relative; list-style: none; margin: 0 -64px; padding: 18px 64px 26px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 24px; background: rgba(8,30,21,.45); }
+.nav-facts li { display: grid; gap: 2px; }
+.nav-facts b { font-size: 16px; }
+.nav-facts span { font-size: 13.5px; color: rgba(245,239,227,.75); }
+
+/* Familiares */
+.familiares { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: center; background: var(--marfil2); padding: clamp(40px, 6vw, 72px) 64px; }
+.fam-text h2 { font-family: var(--font-display); font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.05; margin: 0 0 12px; color: var(--marino); }
+.fam-text p { max-width: 46ch; color: var(--gris); margin-bottom: 22px; }
+.fam-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.fam-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 5px solid #fff; border-radius: 16px; box-shadow: var(--shadow-md); }
+.fam-photos img:first-child { transform: rotate(-3deg); }
+.fam-photos img:last-child { transform: rotate(3deg) translateY(14px); }
+
+/* Catálogo */
+.nav-catalog { max-width: 1240px; margin: 0 auto; }
+.filters { display: grid; gap: 10px; margin: 6px 0 16px; }
+.fgroup { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1.5px solid var(--marino); background: transparent; color: var(--marino); border-radius: 999px; padding: 7px 16px; font-weight: 700; font-size: 14px; cursor: pointer; transition: background .2s, color .2s; }
+.chip:hover { background: var(--marfil2); }
+.chip.on { background: var(--marino); color: var(--marfil); }
+.fgroup[data-group="para"] .chip.on { background: var(--rojo); border-color: var(--rojo); }
+.result-count { font-size: 14px; color: var(--gris); margin-bottom: 16px; }
+.empty-msg { text-align: center; color: var(--gris); padding: 40px 12px; }
+.n-card { position: relative; }
+.n-card .ribbon { position: absolute; top: 12px; left: -6px; background: var(--rojo); color: var(--marfil); font-size: 12px; font-weight: 700; padding: 4px 12px 4px 14px; border-radius: 0 999px 999px 0; z-index: 2; box-shadow: var(--shadow-sm); }
+.n-card .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 6px 0 12px; }
+.n-card .tags span { font-size: 12px; font-weight: 700; background: var(--marfil2); color: var(--marino); border-radius: 999px; padding: 2px 10px; }
+
+/* Cierre */
+.nav-close { position: relative; overflow: hidden; text-align: center; color: var(--marfil); padding: clamp(56px, 9vw, 110px) 24px;
+  background: radial-gradient(ellipse at 50% 0%, #c0303f 0%, var(--rojo) 45%, var(--rojo2) 100%); }
+.nav-close > * { position: relative; }
+.nav-close h2 { font-family: var(--font-display); font-size: clamp(2rem, 5.6vw, 4rem); line-height: 1.05; margin: 0 0 14px; }
+.nav-close p:not(.nav-script) { max-width: 50ch; margin: 0 auto 26px; color: rgba(245,239,227,.9); }
+.nav-close .nav-actions { justify-content: center; }
+.nav-close .nav-script { color: var(--champagne, #E0CBAA); }
+
+@media (max-width: 900px) {
+  .nav-hero, .familiares { padding-left: 20px; padding-right: 20px; }
+  .nav-facts { margin: 0 -20px; padding: 16px 20px 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .familiares { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .snow { animation: none; } }

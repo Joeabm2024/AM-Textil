@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navidad | Amos</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="navidad.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="brand"><a href="index.html" aria-label="Amos, inicio"><img src="images/logo-amos-horizontal.png" alt="Amos" class="logo"></a></div>
+
+  <div class="menu-toggle" id="menuToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="mainNav">
+    <a href="index.html">Inicio</a>
+    <a href="camisas.html">Camisas</a>
+    <a href="uniformes.html">Uniformes</a>
+    <a href="pijamas.html">Pijamas</a>
+    <a href="navidad.html" class="nav-navidad active">Navidad</a>
+    <a href="vestidos.html">Vestidos</a>
+    <a href="personalizados.html">Personalizados</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════════ PORTADA NAVIDEÑA ══════════════ -->
+<section class="nav-hero">
+  <div class="snow" aria-hidden="true"></div>
+  <div class="nav-hero-inner">
+    <p class="nav-script">colección navideña</p>
+    <h1>Navidad<br>en pijamas</h1>
+    <p class="nav-lead">Para mamá, papá, las niñas y los niños. Diseños que combinan para que toda la familia amanezca igual de feliz.</p>
+    <div class="nav-actions">
+      <a class="btn-gold" href="#catalogo">Ver las pijamas</a>
+      <a class="btn-ghost" href="#familiares">Pijamas familiares</a>
+    </div>
+  </div>
+  <ul class="nav-facts" aria-label="Datos de la colección">
+    <li><b>Mujer · Hombre</b><span>Adultos</span></li>
+    <li><b>Niñas · Niños</b><span>Todas las edades</span></li>
+    <li><b>Largas y cortas</b><span>Con y sin botones</span></li>
+    <li><b>Por encargo</b><span>Hechas en Costa Rica</span></li>
+  </ul>
+</section>
+
+<!-- ══════════════ FAMILIARES ══════════════ -->
+<section class="familiares" id="familiares">
+  <div class="fam-text">
+    <p class="nav-script dark">todos iguales</p>
+    <h2>Pijamas familiares</h2>
+    <p>La misma tela para papá, mamá y los niños. Elegís el diseño y las tallas de cada uno, y las confeccionamos juntas.</p>
+    <a class="btn-red" href="#catalogo" data-filter="familia">Ver familiares</a>
+  </div>
+  <div class="fam-photos">
+    <img src="imagenes/pijamas familiar/f1.png" alt="Pijamas familiares para pareja">
+    <img src="imagenes/pijamas familiar/f2.png" alt="Pijamas familiares con niños">
+  </div>
+</section>
+
+<!-- ══════════════ CATÁLOGO ══════════════ -->
+<section class="catalog nav-catalog" id="catalogo">
+  <h2 class="section-title">Catálogo navideño</h2>
+  <p class="section-sub">Filtrá por quién la va a usar y por el tipo de pijama</p>
+
+  <div class="filters" role="group" aria-label="Filtros">
+    <div class="fgroup" data-group="para" aria-label="Para quién">
+      <button type="button" class="chip on" data-v="todos">Todas</button>
+      <button type="button" class="chip" data-v="mujer">Mujer</button>
+      <button type="button" class="chip" data-v="hombre">Hombre</button>
+      <button type="button" class="chip" data-v="ninas">Niñas</button>
+      <button type="button" class="chip" data-v="ninos">Niños</button>
+      <button type="button" class="chip" data-v="familia">Familia</button>
+    </div>
+    <div class="fgroup" data-group="largo" aria-label="Largo">
+      <button type="button" class="chip on" data-v="todos">Cualquier largo</button>
+      <button type="button" class="chip" data-v="larga">Larga</button>
+      <button type="button" class="chip" data-v="corta">Corta</button>
+    </div>
+    <div class="fgroup" data-group="botones" aria-label="Botones">
+      <button type="button" class="chip on" data-v="todos">Con o sin botones</button>
+      <button type="button" class="chip" data-v="si">Con botones</button>
+      <button type="button" class="chip" data-v="no">Sin botones</button>
+    </div>
+  </div>
+  <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+  <div class="products n-products" id="productos"></div>
+  <p class="empty-msg" id="vacio" hidden>No hay pijamas con esa combinación todavía. Probá con otro filtro o escribinos para pedirla por encargo.</p>
+</section>
+
+<!-- ══════════════ CIERRE ══════════════ -->
+<section class="nav-close">
+  <div class="snow" aria-hidden="true"></div>
+  <p class="nav-script">hecho con amor</p>
+  <h2>Que esta Navidad<br>se sienta en casa</h2>
+  <p>Trabajamos por encargo. Escribinos con el diseño, las tallas y cuántas pijamas necesitás.</p>
+  <div class="nav-actions">
+    <a class="btn-gold" id="waNavidad" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    <a class="btn-ghost" href="personalizados.html">Pijama personalizada</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Amos</div>
+  <div class="footer-copy">© 2026 Amos — Costa Rica</div>
+  <div class="footer-links">
+    <a href="contacto.html">Contacto</a>
+    <a href="personalizados.html">Personalizados</a>
+    <a href="uniformes.html">Uniformes</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="navidad.js"></script>
+</body>
+</html>
