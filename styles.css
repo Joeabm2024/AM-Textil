@@ -1,6 +1,6 @@
 /* =====================================================
    AMOS — Estilos Globales
-   Paleta: Marino · Arena · Oro · Marfil
+   Paleta: Navy · Champagne · Marfil (ivory) · Azul francés · Oro
    Tipografía: Caviar Dreams
 ===================================================== */
 
@@ -12,20 +12,19 @@
 
 /* ── Variables ── */
 :root {
-  --bronce:    #96703C;
-  --bronce2:   #7C5A2D;
-  --oro:        #C9A24D;
-  --marfil:     #FBF6EC;
-  --marfil2:    #F1E6D0;
-  --azul:       #3A5A8C;
-  --azul2:      #2B4670;
+  --oro:        #BE9652;
+  --oro2:       #A07C3C;
+  --marfil:     #F5EFE3;
+  --marfil2:    #EADFCB;
+  --azul:       #7B96B2;
+  --azul2:      #4F6B89;
   --marino:     #1C3150;
-  --gris:       #6F6E85;
+  --gris:       #667286;
   --blanco:     #FFFFFF;
 
-  --shadow-sm: 0 2px 8px rgba(20,39,94,.08);
-  --shadow-md: 0 6px 22px rgba(20,39,94,.13);
-  --shadow-lg: 0 14px 40px rgba(20,39,94,.18);
+  --shadow-sm: 0 2px 8px rgba(28,49,80,.08);
+  --shadow-md: 0 6px 22px rgba(28,49,80,.13);
+  --shadow-lg: 0 14px 40px rgba(28,49,80,.18);
 
   --radius: 14px;
   --radius-sm: 8px;
@@ -98,8 +97,8 @@ body {
 
 .header nav a:hover,
 .header nav a.active {
-  background: var(--bronce);
-  color: var(--blanco);
+  background: var(--oro);
+  color: var(--marino);
 }
 
 /* Hamburger (mobile) */
@@ -149,9 +148,9 @@ body {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(20,39,94,.65) 0%,
-    rgba(196,96,58,.25) 60%,
-    rgba(20,39,94,.5) 100%
+    rgba(28,49,80,.65) 0%,
+    rgba(190,150,82,.25) 60%,
+    rgba(28,49,80,.5) 100%
   );
   z-index: 1;
 }
@@ -167,8 +166,8 @@ body {
   padding: 44px 52px;
   border-radius: var(--radius);
   backdrop-filter: blur(3px);
-  background: rgba(20,39,94,.3);
-  border: 1px solid rgba(253,246,236,.15);
+  background: rgba(28,49,80,.3);
+  border: 1px solid rgba(245,239,227,.15);
   min-width: 380px;
 }
 
@@ -191,7 +190,7 @@ body {
 
 .hero-text p {
   font-size: 17px;
-  color: rgba(253,246,236,.85);
+  color: rgba(245,239,227,.85);
   margin-bottom: 28px;
 }
 
@@ -208,7 +207,7 @@ body {
 .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(253,246,236,.4);
+  background: rgba(245,239,227,.4);
   cursor: pointer;
   transition: background .3s, transform .3s;
 }
@@ -223,8 +222,8 @@ body {
 .btn {
   display: inline-block;
   padding: 11px 24px;
-  background: var(--bronce);
-  color: var(--blanco);
+  background: var(--oro);
+  color: var(--marino);
   text-decoration: none;
   border-radius: var(--radius-sm);
   font-weight: 600;
@@ -235,19 +234,19 @@ body {
   cursor: pointer;
 }
 .btn:hover {
-  background: var(--bronce2);
+  background: var(--oro2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(196,96,58,.35);
+  box-shadow: 0 6px 18px rgba(190,150,82,.35);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--bronce);
-  color: var(--bronce);
+  border: 2px solid var(--marino);
+  color: var(--marino);
 }
 .btn-outline:hover {
-  background: var(--bronce);
-  color: var(--blanco);
+  background: var(--marino);
+  color: var(--marfil);
 }
 
 .btn-whatsapp {
@@ -273,7 +272,7 @@ body {
    BANNER DE CATEGORÍA
 =================================================== */
 .page-banner {
-  background: linear-gradient(135deg, var(--marino) 0%, #2C4A7A 100%);
+  background: linear-gradient(135deg, var(--marino) 0%, #3F5C7E 100%);
   padding: 52px 64px;
   color: var(--marfil);
 }
@@ -293,7 +292,7 @@ body {
   font-weight: 700;
 }
 .page-banner p {
-  color: rgba(253,246,236,.7);
+  color: rgba(245,239,227,.7);
   margin-top: 8px;
   font-size: 16px;
 }
@@ -336,7 +335,7 @@ body {
   display: inline-block;
   width: 4px;
   height: 28px;
-  background: var(--bronce);
+  background: var(--oro);
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -367,7 +366,7 @@ body {
   outline: none;
   transition: border .2s;
 }
-.buscador:focus { border-color: var(--bronce); }
+.buscador:focus { border-color: var(--azul); }
 .buscador::placeholder { color: var(--gris); }
 .search-icon {
   position: absolute;
@@ -424,7 +423,7 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: rgba(20,39,94,.6);
+  background: rgba(28,49,80,.6);
   color: white;
   border-radius: 6px;
   padding: 4px 8px;
@@ -483,7 +482,7 @@ body {
   margin-bottom: 16px;
 }
 .home-intro-text p {
-  color: rgba(253,246,236,.7);
+  color: rgba(245,239,227,.7);
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 28px;
@@ -497,8 +496,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(253,246,236,.08);
-  border: 1px solid rgba(253,246,236,.15);
+  background: rgba(245,239,227,.08);
+  border: 1px solid rgba(245,239,227,.15);
   border-radius: 99px;
   padding: 6px 14px;
   font-size: 13px;
@@ -515,7 +514,7 @@ body {
 
 /* Stats strip */
 .stats-strip {
-  background: var(--bronce);
+  background: var(--oro);
   display: grid;
   grid-template-columns: repeat(4,1fr);
   text-align: center;
@@ -566,7 +565,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20,39,94,.75) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(28,49,80,.75) 0%, transparent 55%);
 }
 .collection-info {
   position: absolute;
@@ -583,7 +582,7 @@ body {
 }
 .collection-info p {
   font-size: 13px;
-  color: rgba(253,246,236,.8);
+  color: rgba(245,239,227,.8);
   margin-bottom: 14px;
 }
 
@@ -654,7 +653,7 @@ body {
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow-sm);
-  border-top: 3px solid var(--bronce);
+  border-top: 3px solid var(--oro);
 }
 .contact-card .icon {
   font-size: 26px;
@@ -692,8 +691,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 48px; height: 48px;
-  background: var(--bronce);
-  color: white;
+  background: var(--oro);
+  color: var(--marino);
   border-radius: 50%;
   font-family: var(--font-display);
   font-size: 22px;
@@ -708,7 +707,7 @@ body {
 =================================================== */
 footer {
   background: var(--marino);
-  color: rgba(253,246,236,.6);
+  color: rgba(245,239,227,.6);
   padding: 40px 64px;
   display: flex;
   justify-content: space-between;
@@ -724,7 +723,7 @@ footer {
 .footer-copy { font-size: 13px; }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a {
-  color: rgba(253,246,236,.6);
+  color: rgba(245,239,227,.6);
   text-decoration: none;
   font-size: 13px;
   transition: color .2s;
